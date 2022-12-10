@@ -1,0 +1,120 @@
+@use '/styles/globals/variables' as *;
+
+.container {
+	height: 100vh - $nav-height;
+
+	background-color: $bg-tertiary;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-items: center;
+}
+
+.bookList {
+	width: 100%;
+	padding: 2rem 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+.bookElement {
+	width: 90%;
+
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	box-sizing: border-box;
+	padding: 1rem 2rem;
+
+	background-color: white;
+}
+.bookElement > span:first-child {
+	font-weight: bold;
+}
+.bookElement > span:nth-child(2) {
+	font-weight: 100;
+}
+
+.bookElement > button {
+	margin-left: auto;
+
+	box-sizing: border-box;
+	border-radius: 2rem;
+	padding: 0.5rem 2rem;
+
+	border-width: 0;
+	background-color: $bg-secondary;
+	color: $text-secondary;
+
+	cursor: pointer;
+}
+.bookElement > button:hover {
+	background-color: $bg-primary;
+}
+
+.loadButton {
+	background-color: $bg-secondary;
+	color: $text-secondary;
+
+	border-width: 0;
+
+	box-sizing: border-box;
+	border-radius: 2rem;
+	padding: 0.5rem 2rem;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	z-index: 1000;
+	backdrop-filter: blur(2px);
+
+	height: 100vh;
+	width: 100vw;
+}
+
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	border: solid black 2px;
+	background-color: white;
+
+	width: 70%;
+
+	display: flex;
+	flex-direction: column;
+	z-index: 1001;
+
+	box-sizing: border-box;
+	padding: 2rem;
+}
+
+.modal > div:first-child {
+	font-size: 2rem;
+	font-weight: bold;
+}
+.orderedList {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.x {
+	font-size: 1.5rem;
+
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+
+	cursor: pointer;
+}

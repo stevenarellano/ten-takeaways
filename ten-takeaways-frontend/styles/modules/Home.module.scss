@@ -1,4 +1,42 @@
+@use '/styles/globals/variables' as *;
+
 .container {
-    width: 90%;
-    background-color: red;
+	height: 100vh - $nav-height;
+	box-sizing: border-box;
+	padding: 2rem 2rem 8rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+
+	gap: 1rem;
+	background-color: $bg-tertiary;
+}
+
+.header {
+	font-size: 3rem;
+	color: $text-primary;
+}
+.subhead {
+	font-size: 1rem;
+	color: $text-tertiary;
+	width: 45%;
+}
+.navigateButton {
+	color: $text-secondary;
+	background-color: $bg-secondary;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 0.75rem 1rem;
+	box-sizing: border-box;
+	border-radius: 2rem;
+	width: 20%;
+
+	text-decoration: none;
+}
+.navigateButton:active {
+	background-color: $bg-primary;
 }

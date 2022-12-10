@@ -1,0 +1,32 @@
+@use '/styles/globals/variables' as *;
+
+.nav {
+	display: flex;
+	height: $nav-height;
+	box-sizing: border-box;
+	padding: 0 2rem;
+
+	align-items: center;
+	justify-content: flex-start;
+
+	gap: 1rem;
+
+	background-color: $bg-primary;
+}
+
+.nav > * {
+	color: $text-secondary;
+	text-decoration: none;
+}
+
+.nav > *:nth-child(2) {
+	font-weight: bold;
+}
+
+.nav > *:nth-child(3) {
+	margin-left: auto;
+}
+
+.activeItem {
+	font-weight: bold;
+}
