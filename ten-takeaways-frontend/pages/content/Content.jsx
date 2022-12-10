@@ -1,14 +1,10 @@
-import { Flex, Box, Button, Image } from "@chakra-ui/react";
-
-
 import { BookItem } from '/components'
-import { TAKEAWAYS, BOOK_INFO } from '/context'
-import { useState, useEffect } from "react";
+import { BOOK_INFO } from '/context'
+import { useState } from "react";
 
 import styles from '/styles/modules/Content.module.scss'
 
 export function Content() {
-    const takeaways = BOOK_INFO;
     const [lastInd, setLastInd] = useState(10);
 
     function extendList() {
@@ -21,7 +17,7 @@ export function Content() {
     return (
         <div className={styles.container}>
             <div className={styles.bookList}>
-                {BOOK_INFO.map(ele => <BookItem title={ele.title} author={ele.author} />)}
+                {BOOK_INFO.map((ele, i) => <BookItem key={i} title={ele.title} author={ele.author} />)}
             </div>
             <button
                 className={styles.loadButton}

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from '/styles/modules/Home.module.scss';
 
-export function Home() {
+const Home = () => {
     return (
         <div className={styles.container}>
             <div className={styles.header}>A peek at some reads.</div>

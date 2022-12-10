@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { TAKEAWAYS, BOOK_INFO } from '/context'
+import { TAKEAWAYS } from '/context'
 
 import styles from '/styles/modules/Content.module.scss'
 
@@ -34,7 +34,7 @@ function BookItem({ title, author }) {
                 <div>Takeaways</div>
                 <div onClick={toggle} className={styles.x}>X</div>
                 <ol className={styles.orderedList}>
-                    {TAKEAWAYS[title].map(ele => <li>{ele}</li>)}
+                    {TAKEAWAYS[title].map((ele, i) => <li key={i}>{ele}</li>)}
                 </ol>
             </div>
         </>
